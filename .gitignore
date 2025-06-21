@@ -1,24 +1,164 @@
-# Compiled class file
-*.class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Forever</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0b0c2a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease-out;
+    }
+    header img {
+      width: 150px;
+      animation: scaleIn 1s ease-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: 15px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #fca311;
+      animation: fadeIn 2s ease-in-out;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeUp 1.5s ease-out;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #fca311;
+      font-size: 2rem;
+    }
+    .services ul {
+      list-style: none;
+    }
+    .services li {
+      margin: 12px 0;
+      font-size: 1.1rem;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: #fca311;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      color: black;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ffba4a;
+    }
+    .qr {
+      margin-top: 30px;
+    }
+    .qr img {
+      width: 180px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      animation: pulse 2s infinite;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+    }
 
-# Log file
-*.log
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes scaleIn {
+      from {opacity: 0; transform: scale(0.5);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+      100% {transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
 
-# BlueJ files
-*.ctxt
+  <header>
+    <img src="logo.png" alt="Media Forever Logo" />
+    <h1>Media Forever</h1>
+    <p class="tagline">Sapne Unke hi Pure Hote hai joh forever main Saath khade rahte hai!</p>
+  </header>
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We help brands speak louder and connect deeper. From strategy to content, we’re the creative partner every business needs to stand out.</p>
+  </section>
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+  <section class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>🚀 Digital Campaigns</li>
+      <li>🧠 Brand Strategy</li>
+      <li>📸 Content Creation</li>
+      <li>📲 Social Media Marketing</li>
+    </ul>
+  </section>
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="qr">
+      <p style="margin-top: 20px;">📱 Scan to Chat on WhatsApp</p>
+      <img src="whatsapp-qr.jpeg" alt="WhatsApp QR Code" />
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Media Forever. Built with creativity.
+  </footer>
+
+</body>
+</html>
